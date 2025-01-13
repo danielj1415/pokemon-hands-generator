@@ -50,6 +50,7 @@ function App() {
         return deckList.deck
             .split('\n')
             .filter(line => line.trim() !== '' && !/^(Pokémon:|Trainer:|Energy:|Total Cards:)/.test(line))
+            .map(line => line.replace(/\sPH$/, ''))
             .flatMap(line => {
                 const match = line.match(/^(\d+)\s+(.+)$/);
                 if (match) {
@@ -73,6 +74,7 @@ function App() {
         TWM: "sv06",
         SFA: "sv06.5",
         SCR: "sv07",
+        SSP: "sv08",
         SSH: "swsh1",
         RCL: "swsh2",
         DAA: "swsh3",
@@ -91,8 +93,37 @@ function App() {
         CRZ: "swsh12.5",
         PR: "swshp",
         CEL: "cel25",
-        CES: "sm7",
+        XY: "xy1",
+        FLF: "xy2",
         FFI: "xy3",
+        PHF: "xy4",
+        PRC: "xy5",
+        ROS: "xy6",
+        AOR: "xy7",
+        BKT: "xy8",
+        BKP: "xy9",
+        FCO: "xy10",
+        STS: "xy11",
+        EVO: "xy12",
+        DCR: "dc1",
+        GEN: "g1",
+        SUM: "sm1",
+        GRI: "sm2",
+        BUS: "sm3",
+        CIN: "sm4",
+        UPR: "sm5",
+        FLI: "sm6",
+        CES: "sm7",
+        LOT: "sm8",
+        TEU: "sm9",
+        UNB: "sm10",
+        UNM: "sm11",
+        CEC: "sm12",
+        SLG: "sm3.5",
+        DRM: "sm7.5",
+        DET: "det1",
+        HIF: "sm115",
+
     };
 
     const energyImageMapping = {
