@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import './App.css';
 import waterEnergy from './assets/images/basicWaterEnergy.jpg';
 import psychicEnergy from './assets/images/basicPsychicEnergy.jpg';
@@ -8,6 +8,7 @@ import fireEnergy from './assets/images/basicFireEnergy.jpg';
 import grassEnergy from './assets/images/basicGrassEnergy.jpg';
 import fightingEnergy from './assets/images/basicFightingEnergy.jpg';
 import darkEnergy from './assets/images/basicDarkEnergy.jpg';
+import { BrowserRouter } from "react-router-dom";
 
 
 function App() {
@@ -237,6 +238,7 @@ function App() {
 
     return(
         <div>
+            <BrowserRouter basename = "/pokemon-hands-generator">
             <div className="mainContainer">
                 <div className="navigationBar">
                     <p className="headerTextBold">Pokemon Test Hand Generator</p>
@@ -290,6 +292,7 @@ function App() {
                     </div>
                 </div>
             </div>
+            </BrowserRouter>
         </div>
     )
 }
